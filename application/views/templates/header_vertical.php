@@ -52,7 +52,7 @@
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">
 	<script   src="<?php echo base_url() ?>assets/jquery/jquery.min.js"></script>
 
-    <script>
+    <!-- <script>
         var clicked = true;
 function showHide(){
 
@@ -91,7 +91,7 @@ if(clicked){
 
 
 
-    </script>
+    </script> -->
 	<script src="https://unpkg.com/@panzoom/panzoom@4.4.3/dist/panzoom.min.js"></script>
 	
 
@@ -212,7 +212,7 @@ if(clicked){
                 <!-- Top navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                     <div class="container-fluid">
-                        <img onclick="showHide()" src="<?php echo base_url() ?>assets/images/posts/hide.jpg" id="sidebarToggle" style="
+                        <img onclick="showHide()" src="<?php echo base_url(); ?>assets/images/posts/hide.jpg" id="sidebarToggle" style="
 
                         width: 43px;
                         height: 49px;
@@ -263,8 +263,12 @@ if(clicked){
                                           <?php } ?>
                                     </div>
                                 </li> -->
-                                <!-- <a class="dropdown-item" href="http://localhost/blog/users/logout">Logout</a> -->
-                                <li class="nav-item btn1"><a class="nav-link" href="http://localhost/blog/users/logout">Logout</a></li>
+                                <!-- <a class="dropdown-item" href="<?php echo base_url() ?>users/logout">Logout</a> -->
+
+                                <?php if($this->session->userdata('logged_in')) { ?>
+                                <li class="nav-item btn1"><a class="nav-link" href="<?php echo base_url() ?>users/logout">Logout</a></li>
+
+                            <?php  }?>
                             </ul>
                         </div>
                     </div>

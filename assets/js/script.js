@@ -11,14 +11,14 @@ var sidebarToggle = document.body.querySelector('#sidebarToggle');
 
 if(clicked){
 
-                sidebarToggle.src = "http://localhost/blog/assets/images/posts/open.jpg";
+                sidebarToggle.src = "<?php echo base_url() ?>assets/images/posts/open.jpg";
 
                 clicked = false;
 
 
             }else{
 
-                 sidebarToggle.src = "http://localhost/blog/assets/images/posts/hide.jpg";
+                 sidebarToggle.src = "<?php echo base_url() ?>assets/images/posts/hide.jpg";
 
                  clicked = true;
 

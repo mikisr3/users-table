@@ -217,6 +217,8 @@ class Pages extends CI_Controller
 
 	public function search_user(){
 
+		
+
 		if($this->input->post('searchText')){
 
 
@@ -412,6 +414,8 @@ for ($i = 0; $i < count($all); $i++){
 
 		//$data['select'] = $selection;
 
+			if($selection){
+
 		$data['users'] = $this->user_model->users_array_all($selection);
 
 		for ($i = 0; $i < count($all_zero); $i++){
@@ -483,12 +487,14 @@ for ($i = 0; $i < count($all); $i++){
 		$this->load->view('pages/homeFilter',$data);
 		$this->load->view('templates/footer');
 
+	}else{redirect('home');}
+
 	}
 
 
 
-								
-							}
+								}
+							
 }
 
 

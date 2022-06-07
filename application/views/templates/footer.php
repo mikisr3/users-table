@@ -26,7 +26,7 @@
 </script>
 <script src="<?php echo base_url() ?>assets/js/selectFilter.min.js"></script>
 <script>
-	if((window.location.href == 'http://localhost/blog/users/login')||(window.location.href == 'http://localhost/blog/users/register')){
+	if((window.location.href == '<?php echo base_url() ?>users/login')||(window.location.href == '<?php echo base_url() ?>users/register')||(window.location.href == '<?php echo base_url() ?>')){
 
     
 
