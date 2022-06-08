@@ -3,7 +3,7 @@
 								
 function showHide(){
 
-  console.log("hjhjh");
+   console.log("hjhjh");
 
 var clicked = true;
 
