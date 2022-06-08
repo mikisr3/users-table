@@ -25,7 +25,7 @@
 
 
 
-      " href="http://localhost/blog/users/register">Or Register</a>
+      " href="<?php echo base_url(); ?>users/register">Or Register</a>
 
       <button type="submit" class="btn btn-primary btn-block">Login</button>      
 	</div>
